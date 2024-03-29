@@ -10,7 +10,7 @@ import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { Menu } from "~/components/Menu";
+import { Menu } from "~/components/custom/Menu";
 import { MenuItem } from "~/components/custom/MenuItem";
 
 import { GetLeagues } from "~/services";

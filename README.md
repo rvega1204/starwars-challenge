@@ -1,36 +1,86 @@
-# Welcome to Remix + Vite!
+# Remix + Shadcn UI Football API Demo
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+This repository serves as a demonstration of setting up a project using Remix and Shadcn UI to interact with the Football-API. The project utilizes endpoints related to leagues, teams, and venues provided by the Football-API.
 
-## Development
+## Installation
 
-Run the Vite dev server:
+To get started with this project, follow these steps:
 
-```shellscript
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/your-repo.git
+```
+
+2. Navigate to the project directory
+
+```bash
+cd project
+```
+
+3. generate .env variables
+
+```bash
+cp .env.template .env # After this fullfill all necesary environment variables
+```
+
+4. Install all dependencies
+
+```bash
+npm install
+```
+
+## Usage
+
+Once you have set up the project and installed the dependencies, you can run the application locally:
+
+```bash
 npm run dev
+
 ```
 
-## Deployment
+This command will start the development server, and you can access the application at http://localhost:3000.
 
-First, build your app for production:
+## Features
 
-```sh
-npm run build
+This demo project showcases the following features:
+
+Integration with Football-API to fetch data related to leagues, teams, and venues.
+Displaying fetched data using Remix and Shadcn UI components.
+Simple navigation between different sections of the application.
+
+## Fully API Documentation
+
+As we are using Football-API for this project, we suggest to read the Documentation from [here](https://www.api-football.com/documentation-v3). This is the entire documentation for the API.
+You can [create your account here](https://dashboard.api-football.com/register), that will be used to generate the Authorization Token.
+
+For the final endpoint we are using api-football dashboard, so you will see on the `app/api/index.ts` file the call to that endpoint. If you wish to use RAPID API, feel free to change that enpoint.
+
+```ts
+import axios from "axios";
+
+export const apiInstance = axios.create({
+  baseURL: "https://v3.football.api-sports.io", // change this url in case of using Rapid API
+  headers: {
+    "x-apisports-key": process.env.FOOTBALL_API_KEY || "",
+  },
+});
 ```
 
-Then run the app in production mode:
+## Needed endpoints
 
-```sh
-npm start
-```
+- [Leagues](https://www.api-football.com/documentation-v3#tag/Leagues)
+- [Teams](https://www.api-football.com/documentation-v3#tag/Teams)
+- [venues](https://www.api-football.com/documentation-v3#tag/Venues)
 
-Now you'll need to pick a host to deploy it to.
+## Acknowledgements
 
-### DIY
+- [Remix](https://remix.run/docs/en/main/start/quickstart)
+- [React](https://es.react.dev/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Shadcn UI](https://ui.shadcn.com/docs)
+- [Football-API](https://www.api-football.com/documentation-v3#section/Introduction)
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+# License
 
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+This project is licensed under the [MIT License](./LICENSE).
