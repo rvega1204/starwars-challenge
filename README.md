@@ -1,6 +1,6 @@
-# Remix + Shadcn UI Football API Demo
+# Remix + Shadcn UI Football API Challenge
 
-This repository serves as a demonstration of setting up a project using Remix and Shadcn UI to interact with the Football-API. The project utilizes endpoints related to leagues, teams, and venues provided by the Football-API.
+This repository serves as a demonstration of setting up the challenge project using Remix and Shadcn UI to interact with the Football-API. The project utilizes endpoints related to leagues, teams, and venues provided by the Football-API.
 
 ## Installation
 
@@ -49,7 +49,7 @@ Integration with Football-API to fetch data related to leagues, teams, and venue
 Displaying fetched data using Remix and Shadcn UI components.
 Simple navigation between different sections of the application.
 
-## Fully API Documentation
+## Full API Documentation
 
 As we are using Football-API for this project, we suggest to read the Documentation from [here](https://www.api-football.com/documentation-v3). This is the entire documentation for the API.
 You can [create your account here](https://dashboard.api-football.com/register), that will be used to generate the Authorization Token.
