@@ -9,13 +9,13 @@ To get started with this project, follow these steps:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/pandanow/challenge-page.git
 ```
 
 2. Navigate to the project directory
 
 ```bash
-cd project
+cd challenge-page
 ```
 
 3. generate .env variables
