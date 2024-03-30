@@ -1,7 +1,15 @@
 # Remix + Shadcn UI Football API Challenge
 
+[![Framework: Remix](https://img.shields.io/badge/framework-remix-blue.svg)](https://remix.run/docs/en/main/start/quickstart)
+[![types: typescript](https://img.shields.io/badge/types-typescript-blue.svg)](https://www.typescriptlang.org)
+[![Style: ShadCN/ui](https://img.shields.io/badge/style-shadCN-blue.svg)](https://ui.shadcn.com/)
+[![package manager: npm](https://img.shields.io/badge/package_manager-npm-blue.svg)](https://www.npmjs.com/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-blue.svg)](https://prettier.io/)
+---
+
 This repository serves as a demonstration of setting up the challenge project using Remix and Shadcn UI to interact with the Football-API. The project utilizes endpoints related to leagues, teams, and venues provided by the Football-API.
 
+The Football API Challenge
 ## Installation
 
 To get started with this project, follow these steps:
