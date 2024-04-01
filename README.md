@@ -28,13 +28,7 @@ git clone https://github.com/pandanow/challenge-page.git
 cd challenge-page
 ```
 
-3. generate .env variables
-
-```bash
-cp .env.template .env # After this fullfill all necesary environment variables
-```
-
-4. Install all dependencies
+3. Install all dependencies
 
 ```bash
 npm install
