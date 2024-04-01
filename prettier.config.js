@@ -5,6 +5,6 @@ const config = {
   semi: true,
   singleQuote: false,
   useTabs: false,
-}
+};
 
-export default config
+export default config;
