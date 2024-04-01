@@ -1,16 +1,3 @@
-import { json, type MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
-import { Menu } from "~/components/Menu";
-import { MenuItem } from "~/components/custom/MenuItem";
-import { GetLeagues } from "~/services";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "BAS POC Football" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
-
 export default function Index() {
   return (
     <div className="flex flex-col gap-2">

@@ -5,27 +5,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react"
-import type { LinksFunction } from "@remix-run/node"
-import stylesheet from "~/tailwind.css?url"
-import { json } from "@remix-run/node"
-import { useLoaderData } from "@remix-run/react"
-import { Menu } from "~/components/custom/Menu"
-import { MenuItem } from "~/components/custom/MenuItem"
+} from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "~/tailwind.css?url";
 
-import { GetLeagues } from "~/services"
-export const loader = async () => {
-  const leagues = await GetLeagues()
-
-  return json({
-    leagues,
-  })
-}
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-]
+];
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { leagues } = useLoaderData<typeof loader>()
   return (
     <html lang="en">
       <head>
@@ -34,39 +21,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex">
-        <Menu>
-          {leagues.map((league) => (
-            <MenuItem
-              title={league.name}
-              value={league.id.toString()}
-              key={league.id}
-            >
-              {league.seasons.map((season) => (
-                <>
-                  <Link
-                    key={season.year}
-                    to={`/teams/${season.year}/${league.id}`}
-                  >
-                    {season.year}
-
-                    <br />
-                  </Link>
-                </>
-              ))}
-            </MenuItem>
-          ))}
-        </Menu>
-        <div id="detail" className="max-w-[calc(100vw - 250px)]">
-          {children}
-        </div>
+      <body>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
 
 export default function App() {
-  return <Outlet />
+  return <Outlet />;
 }
