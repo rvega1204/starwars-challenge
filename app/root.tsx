@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex items-start justify-between">
-        <SidebarMenu></SidebarMenu>
+        <SidebarMenu />
         <main className="h-full w-full p-5">
           <Tabs defaultValue="account" className="h-72 w-[full]">
             <TabsList className=" w-full grid-cols-none">
