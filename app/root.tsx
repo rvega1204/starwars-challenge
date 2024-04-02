@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
 import type { LinksFunction } from "@remix-run/node"
 import { menuData } from "./seed"
 import stylesheet from "~/tailwind.css?url"
@@ -35,11 +35,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </TabsList>
-          {menuData.map((item) => (
-            <TabsContent key={item.title} value={item.title}>
-              <div>{item.title}</div>
-            </TabsContent>
-          ))}
         </Tabs>
         {children}
         <ScrollRestoration />
