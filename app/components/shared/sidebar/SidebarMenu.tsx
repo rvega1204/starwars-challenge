@@ -8,7 +8,7 @@ import {
   CommandItem,
   CommandList,
 } from "~/components/ui/command";
-import { menuData } from "~/seed";
+import { menuData } from "~/data";
 import { Link } from "@remix-run/react";
 
 export const SidebarMenu = () => {
