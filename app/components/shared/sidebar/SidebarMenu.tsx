@@ -1,5 +1,6 @@
 import React from "react";
 import { SidebarHeader } from "./SidebarHeader";
+import { Plane } from "lucide-react";
 import {
   Command,
   CommandGroup,
@@ -18,11 +19,12 @@ export const SidebarMenu = () => {
           <CommandList>
             <CommandGroup heading="Applications">
               {menuData.map((data) => (
-                <CommandItem key={data.url} className="flex gap-2">
-                  <Link to={data.url}>
-                    <span>{data.title}</span>
-                  </Link>
-                </CommandItem>
+                <Link to={data.url}>
+                  <CommandItem key={data.url} className="flex gap-2">
+                    <Plane />
+                    {data.title}
+                  </CommandItem>
+                </Link>
               ))}
             </CommandGroup>
           </CommandList>
