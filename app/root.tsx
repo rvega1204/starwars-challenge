@@ -5,15 +5,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react"
-import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
-import type { LinksFunction } from "@remix-run/node"
-import { menuData } from "./seed"
-import stylesheet from "~/tailwind.css?url"
+} from "@remix-run/react";
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import type { LinksFunction } from "@remix-run/node";
+import { menuData } from "./seed";
+import stylesheet from "~/tailwind.css?url";
+import { SidebarMenu } from "./components/shared/sidebar/SidebarMenu";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-]
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -24,26 +25,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Tabs defaultValue="account" className="h-72 w-[full]">
-          <TabsList className=" w-full grid-cols-none">
-            {menuData.map((item) => (
-              <Link key={item.url} to={item.url}>
-                <TabsTrigger key={item.title} value={item.title}>
-                  {item.title}
-                </TabsTrigger>
-              </Link>
-            ))}
-          </TabsList>
-        </Tabs>
-        {children}
+      <body className="flex items-start justify-between">
+        <SidebarMenu />
+        <main className="h-full w-full p-5">
+          <Tabs defaultValue="account" className="h-72 w-[full]">
+            <TabsList className=" w-full grid-cols-none">
+              {menuData.map((item) => (
+                <Link key={item.url} to={item.url}>
+                  <TabsTrigger key={item.title} value={item.title}>
+                    {item.title}
+                  </TabsTrigger>
+                </Link>
+              ))}
+            </TabsList>
+          </Tabs>
+          {children}
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
 
 export default function App() {
-  return <Outlet />
+  return <Outlet />;
 }
