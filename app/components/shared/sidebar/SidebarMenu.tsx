@@ -1,39 +1,25 @@
 import { SidebarHeader } from "./SidebarHeader";
 import { Plane } from "lucide-react";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandItem,
-  CommandList,
-} from "~/components/ui/command";
 import { menuData } from "~/data";
-import { Link } from "@remix-run/react";
+import { useLocation } from "@remix-run/react";
+import { SidebarMenuItem } from "./SidebarMenuItem";
+import { MenuItemGroup } from "../navbar/MenuItemGroup";
 
 export const SidebarMenu = () => {
+  const location = useLocation();
   return (
     <div className="min-h-screen w-[300px] min-w-[300px] border-r p-4">
       <SidebarHeader />
-      <div className="my-5 ">
-        <Command className="rounded-lg border">
-          <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup heading="Applications">
-              {menuData.map((data) => (
-                <Link key={data.url} to={data.url}>
-                  <CommandItem
-                    className="flex cursor-pointer gap-2 "
-                    title={data.title}
-                  >
-                    <Plane />
-                    {data.title}
-                  </CommandItem>
-                </Link>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </div>
+      <MenuItemGroup title="Applications">
+        {menuData.map((item) => (
+          <SidebarMenuItem
+            {...item}
+            icon={<Plane />}
+            isActive={item.url === location.pathname}
+            key={item.url}
+          />
+        ))}
+      </MenuItemGroup>
     </div>
   );
 };
