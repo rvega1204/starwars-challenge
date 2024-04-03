@@ -1,16 +1,14 @@
 import {
-  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import type { LinksFunction } from "@remix-run/node";
-import { menuData } from "./seed";
 import stylesheet from "~/tailwind.css?url";
 import { SidebarMenu } from "./components/shared/sidebar/SidebarMenu";
+import { Navbar } from "./components/shared/navbar/Navbar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -27,19 +25,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="flex items-start justify-between">
         <SidebarMenu />
-        <main className="h-full w-full p-5">
-          <Tabs defaultValue="account" className="h-72 w-[full]">
-            <TabsList className=" w-full grid-cols-none">
-              {menuData.map((item) => (
-                <Link key={item.url} to={item.url}>
-                  <TabsTrigger key={item.title} value={item.title}>
-                    {item.title}
-                  </TabsTrigger>
-                </Link>
-              ))}
-            </TabsList>
-          </Tabs>
-          {children}
+        <main className="h-full w-full">
+          <Navbar />
+          <div className="p-5">{children}</div>
         </main>
         <ScrollRestoration />
         <Scripts />
