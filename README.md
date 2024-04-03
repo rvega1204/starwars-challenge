@@ -70,7 +70,7 @@ As we are using Star Wars API for this project, we suggest to read the Documenta
 
 - [Remix](https://remix.run/docs/en/main/start/quickstart)
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
-- [React](https://es.react.dev/)
+- [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [Shadcn UI](https://ui.shadcn.com/docs)
 - [Star Wars API](https://www.api-football.com/documentation-v3#section/Introductiohttps://swapi.dev/documentation)
