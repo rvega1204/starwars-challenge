@@ -13,7 +13,7 @@ export default function People() {
       <div className="mt-10 px-10 font-light text-gray-700">
         <ul className="list-disc">
           {PeopleChallengeData.items.map((item, index) => (
-            <li>
+            <li key={index}>
               {item.description}{" "}
               {item.documentationUrl && (
                 <Link
