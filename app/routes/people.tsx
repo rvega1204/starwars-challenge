@@ -6,7 +6,7 @@ export default function People() {
     <div>
       <h1 className="mb-5 text-2xl font-bold">{PeopleChallengeData.title}</h1>
       <hr className="mb-10" />
-      <span className="text-greey-700 font-light">
+      <span className="font-light text-gray-700">
         {PeopleChallengeData.description}
       </span>
 
