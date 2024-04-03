@@ -1,6 +1,27 @@
 import { Challenge, ChallengeItem } from "~/interfaces/challenge";
 
-const peopleChallengeItemsData: ChallengeItem[] = [];
+const peopleChallengeItemsData: ChallengeItem[] = [
+  {
+    description:
+      "Create a service that calls the endpoint for using the People API.",
+    documentationUrl: "https://swapi.dev/documentation#people",
+  },
+  {
+    description:
+      "Create the interfaces that have the information needed for the app function.",
+  },
+  {
+    description:
+      "Create the People Card component for viewing the person information",
+  },
+  {
+    description: "Add the page layout.",
+  },
+  {
+    description:
+      "Add more stuff for it to be atractive. Let your imagination fly!",
+  },
+];
 
 export const PeopleChallengeData: Challenge = {
   title: "People Challenge",
