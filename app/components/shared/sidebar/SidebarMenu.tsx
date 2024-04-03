@@ -3,7 +3,7 @@ import { Plane } from "lucide-react";
 import { menuData } from "~/data";
 import { useLocation } from "@remix-run/react";
 import { SidebarMenuItem } from "./SidebarMenuItem";
-import { MenuItemGroup } from "../navbar/MenuItemGroup";
+import { MenuItemGroup } from "./SidebarMenuItemGroup";
 
 export const SidebarMenu = () => {
   const location = useLocation();
