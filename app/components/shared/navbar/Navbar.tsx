@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import { Tabs, TabsList } from "~/components/ui/tabs";
 import { menuData } from "~/data";
 import { NavbarItem } from "./NavbarItem";
 import { useLocation } from "@remix-run/react";
