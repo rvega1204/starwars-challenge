@@ -7,8 +7,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
-import { SidebarMenu } from "./components/shared/sidebar/SidebarMenu";
-import { Navbar } from "./components/shared/navbar/Navbar";
+import { Navbar, SidebarMenu } from "./components/shared";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },

@@ -5,13 +5,6 @@ import { useLocation } from "@remix-run/react";
 
 export const Navbar = () => {
   const location = useLocation();
-  const handleSelect = (url: string) => {
-    if (url === location.pathname) {
-      return true;
-    }
-
-    return false;
-  };
 
   return (
     <Tabs defaultValue="account" className="w-[full]">
@@ -20,7 +13,7 @@ export const Navbar = () => {
           <NavbarItem
             key={item.url}
             {...item}
-            isActive={handleSelect(item.url)}
+            isActive={item.url === location.pathname}
           />
         ))}
       </TabsList>
