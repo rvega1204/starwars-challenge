@@ -1,5 +1,3 @@
-import React from "react";
-
 export const SidebarHeader = () => {
   return (
     <div className="flex items-center justify-between gap-2 rounded border p-4">
