@@ -23,11 +23,9 @@ const filmsChallengeItemData: ChallengeItem[] = [
   },
 ];
 
-export const filmsData: Challenge[] = [
-  {
-    title: "Films Challenge",
-    description:
-      "In this challenge, participants will employ the Star Wars API's 'films' endpoint to gather film details, structuring them into card-based layouts. Leveraging Tailwind CSS for styling and integrating ShadCN components for additional UI enhancements, contestants will design a dynamic webpage showcasing Star Wars film information within visually appealing card structures.",
-    items: filmsChallengeItemData,
-  },
-];
+export const filmsData: Challenge = {
+  title: "Films Challenge",
+  description:
+    "In this challenge, participants will employ the Star Wars API's 'films' endpoint to gather film details, structuring them into card-based layouts. Leveraging Tailwind CSS for styling and integrating ShadCN components for additional UI enhancements, contestants will design a dynamic webpage showcasing Star Wars film information within visually appealing card structures.",
+  items: filmsChallengeItemData,
+};
