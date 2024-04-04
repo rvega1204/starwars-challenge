@@ -5,3 +5,4 @@ export * from "./people-challenge-data";
 export * from "./species-challenge-data";
 export * from "./films-challenge-data";
 export * from "./planets-challenge-data";
+export * from "./vehicles-challenge-data";
