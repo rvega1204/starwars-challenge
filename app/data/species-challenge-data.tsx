@@ -14,7 +14,8 @@ const speciesChallengeItemsData: ChallengeItem[] = [
     documentationUrl: "https://swapi.dev/documentation#species",
   },
   {
-    description: "Call the service from server, and render the table.",
+    description:
+      "Call the service from server, and render the table. Remember to use Query params for the pagination.",
   },
   {
     description:
