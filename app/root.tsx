@@ -26,7 +26,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <SidebarMenu />
         <main className="h-full w-full">
           <Navbar />
-          <div className="p-5">{children}</div>
+          <div className="overflow-x-hidden overflow-y-scroll p-5">
+            {children}
+          </div>
         </main>
         <ScrollRestoration />
         <Scripts />
