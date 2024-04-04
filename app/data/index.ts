@@ -4,3 +4,4 @@ export * from "./starships-challenge-data";
 export * from "./people-challenge-data";
 export * from "./films-challenge-data";
 export * from "./planets-challenge-data";
+export * from "./vehicles-challenge-data";
