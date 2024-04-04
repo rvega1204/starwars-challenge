@@ -22,11 +22,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex items-start justify-between">
+      <body className="justify-between">
         <SidebarMenu />
-        <main className="h-full w-full">
+        <main className="main-content fixed h-full">
           <Navbar />
-          <div className="overflow-x-hidden overflow-y-scroll p-5">
+          <div className="h-full overflow-x-hidden overflow-y-scroll p-5">
             {children}
           </div>
         </main>

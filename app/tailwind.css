@@ -74,3 +74,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.main-content {
+  width: calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
+  left: 300px;
+}
