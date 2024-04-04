@@ -1,9 +1,9 @@
-import { SidebarHeader } from "./SidebarHeader";
+import { SidebarHeader } from "./sidebar-header";
 import { Plane } from "lucide-react";
 import { menuData } from "~/data";
 import { useLocation } from "@remix-run/react";
-import { SidebarMenuItem } from "./SidebarMenuItem";
-import { MenuItemGroup } from "./SidebarMenuItemGroup";
+import { SidebarMenuItem } from "./sidebar-menu-item";
+import { MenuItemGroup } from "./sidebar-menu-item-group";
 
 export const SidebarMenu = () => {
   const location = useLocation();

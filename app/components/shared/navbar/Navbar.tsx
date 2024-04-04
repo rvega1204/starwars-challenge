@@ -1,7 +1,7 @@
+import { useLocation } from "@remix-run/react";
 import { Tabs, TabsList } from "~/components/ui/tabs";
 import { menuData } from "~/data";
-import { NavbarItem } from "./NavbarItem";
-import { useLocation } from "@remix-run/react";
+import { NavbarItem } from ".";
 
 export const Navbar = () => {
   const location = useLocation();
