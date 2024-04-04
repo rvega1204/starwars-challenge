@@ -4,7 +4,7 @@ const planetsChallengeItemsData: ChallengeItem[] = [
   {
     description:
       "Information gathering: Use the API to gather data about planets and other planet-related elements of the Star Wars universe.",
-    documentationUrl: "https://swapi.dev/documentation#starships",
+    documentationUrl: "https://swapi.dev/documentation#planets",
   },
   {
     description:
