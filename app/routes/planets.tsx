@@ -1,6 +1,19 @@
+import { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { planetsChallengeData } from "~/data";
-
+export const meta: MetaFunction = () => {
+  return [
+    { title: `${planetsChallengeData.title} | Star Wars Challenge` },
+    {
+      property: "og:title",
+      content: `${planetsChallengeData.title} | Star Wars Challenge`,
+    },
+    {
+      name: "description",
+      content: planetsChallengeData.description,
+    },
+  ];
+};
 export default function Planets() {
   return (
     <div>

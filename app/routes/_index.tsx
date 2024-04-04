@@ -1,6 +1,19 @@
+import { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { AcknowledgementsData, HomeData } from "~/data/home-data";
-
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Home | Star Wars Challenge" },
+    {
+      property: "og:title",
+      content: "Home | Star Wars Challenge",
+    },
+    {
+      name: "description",
+      content: HomeData.description,
+    },
+  ];
+};
 export default function Index() {
   return (
     <div>
