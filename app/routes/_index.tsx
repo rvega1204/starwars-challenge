@@ -40,7 +40,7 @@ export default function Index() {
             </li>
           ))}
         </ul>
-        <h1 className="text-red-700">new shit<h1/>
+        <h1 className="text-red-700">new shit</h1>
       </div>
       <p className="mb-10 mt-10 text-xl font-medium">
         <span className="font-bold">LITTLE REMINDER:</span> Have fun!
