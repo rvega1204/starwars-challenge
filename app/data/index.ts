@@ -1,3 +1,4 @@
+export * from "./paralax-challenge-data"
 export * from './menu-data';
 export * from './home-data';
 export * from './starships-challenge-data';
