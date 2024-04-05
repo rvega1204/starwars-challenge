@@ -1,20 +1,30 @@
-import { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
-import { PeopleChallengeData } from "~/data";
+import { MetaFunction, json } from '@remix-run/node';
+import { Link, useLoaderData } from '@remix-run/react';
+import { CharacterCard } from '~/components/characters';
+import { PeopleChallengeData } from '~/data';
+import { getCharacters } from '~/services';
+
+export async function loader() {
+  const characters = await getCharacters();
+  return json({ characters });
+}
+
 export const meta: MetaFunction = () => {
   return [
     { title: `${PeopleChallengeData.title} | Star Wars Challenge` },
     {
-      property: "og:title",
+      property: 'og:title',
       content: `${PeopleChallengeData.title} | Star Wars Challenge`,
     },
     {
-      name: "description",
+      name: 'description',
       content: PeopleChallengeData.description,
     },
   ];
 };
 export default function People() {
+  const { characters } = useLoaderData<typeof loader>();
+
   return (
     <div>
       <h1 className="mb-5 text-2xl font-bold">{PeopleChallengeData.title}</h1>
@@ -27,7 +37,7 @@ export default function People() {
         <ul className="list-disc">
           {PeopleChallengeData.items.map((item, index) => (
             <li key={index}>
-              {item.description}{" "}
+              {item.description}{' '}
               {item.documentationUrl && (
                 <Link
                   to={item.documentationUrl}
@@ -39,6 +49,14 @@ export default function People() {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="my-10 border-b">
+        <h2 className="text-xl font-medium">Example of the final Result:</h2>
+      </div>
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {characters.map((character) => (
+          <CharacterCard character={character} />
+        ))}
       </div>
     </div>
   );
