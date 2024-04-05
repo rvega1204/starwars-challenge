@@ -15,7 +15,9 @@ export const StarWarsSidebarMenu: MenuGroup = {
   items: starWarsMenuData,
 };
 
-export const uiMenuData: MenuItem[] = [];
+export const uiMenuData: MenuItem[] = [
+  { url: '/responsive', title: 'Responsive', isActive: false },
+];
 
 export const UISidebarMenuData: MenuGroup = {
   title: 'UI Challenges',
