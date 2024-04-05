@@ -1,6 +1,6 @@
 import { Challenge, ChallengeItem } from "~/interfaces/challenge";
 
-const parallaxChallengeData: ChallengeItem[] = [
+const parallaxChallengeDataItems: ChallengeItem[] = [
   {
     description:
       "Create a background that contains stars",
@@ -22,5 +22,5 @@ export const parallaxChallengeData: Challenge = {
   title: "Parallax Challenge",
   description:
     "In this challenge, participants will employ Taiwind CSS and CSS Styles to make a parallax effect. The main goal is to see the background moving while the startships are on their way to the final destination.",
-  items: parallaxChallengeData,
+  items: parallaxChallengeDataItems,
 };
