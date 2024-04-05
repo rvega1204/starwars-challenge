@@ -1,11 +1,28 @@
-import { MenuItem } from "~/interfaces/menu-item";
+import { MenuGroup, MenuItem } from '~/interfaces/menu-item';
 
-export const menuData: MenuItem[] = [
-  { url: "/", title: "Home" },
-  { url: "/people", title: "People", isActive: false },
-  { url: "/planets", title: "Planets", isActive: false },
-  { url: "/films", title: "Films", isActive: false },
-  { url: "/species", title: "Species", isActive: false },
-  { url: "/vehicles", title: "Vehicles", isActive: false },
-  { url: "/starships", title: "Starships", isActive: false },
+export const starWarsMenuData: MenuItem[] = [
+  { url: '/', title: 'Home' },
+  { url: '/people', title: 'People', isActive: false },
+  { url: '/planets', title: 'Planets', isActive: false },
+  { url: '/films', title: 'Films', isActive: false },
+  { url: '/species', title: 'Species', isActive: false },
+  { url: '/vehicles', title: 'Vehicles', isActive: false },
+  { url: '/starships', title: 'Starships', isActive: false },
+];
+
+export const StarWarsSidebarMenu: MenuGroup = {
+  title: 'Star Wars',
+  items: starWarsMenuData,
+};
+
+export const uiMenuData: MenuItem[] = [];
+
+export const UISidebarMenuData: MenuGroup = {
+  title: 'UI Challenges',
+  items: uiMenuData,
+};
+
+export const SidebarMenuData: MenuGroup[] = [
+  StarWarsSidebarMenu,
+  UISidebarMenuData,
 ];
