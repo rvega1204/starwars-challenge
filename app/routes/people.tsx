@@ -54,8 +54,8 @@ export default function People() {
         <h2 className="text-xl font-medium">Example of the final Result:</h2>
       </div>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {characters.map((character) => (
-          <CharacterCard character={character} />
+        {characters.map((character, index) => (
+          <CharacterCard key={index} character={character} />
         ))}
       </div>
     </div>
