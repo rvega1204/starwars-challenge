@@ -1,4 +1,4 @@
-export * from "./paralax-challenge-data"
+export * from './paralax-challenge-data';
 export * from './menu-data';
 export * from './home-data';
 export * from './starships-challenge-data';
@@ -8,4 +8,3 @@ export * from './films-challenge-data';
 export * from './planets-challenge-data';
 export * from './vehicles-challenge-data';
 export * from './responsive-challenge-data';
-export * from './standardize-challenge-data';
