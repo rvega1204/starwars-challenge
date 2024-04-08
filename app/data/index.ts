@@ -8,3 +8,4 @@ export * from './films-challenge-data';
 export * from './planets-challenge-data';
 export * from './vehicles-challenge-data';
 export * from './responsive-challenge-data';
+export * from './standardize-challenge-data';

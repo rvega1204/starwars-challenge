@@ -16,8 +16,9 @@ export const StarWarsSidebarMenu: MenuGroup = {
 };
 
 export const uiMenuData: MenuItem[] = [
- { url: '/parallax', title: 'Parallax', isActive: false },
  { url: '/responsive', title: 'Responsive', isActive: false },
+ { url: '/standardize', title: 'Standardize', isActive: false },
+ { url: '/parallax', title: 'Parallax', isActive: false },
 ];
 
 export const UISidebarMenuData: MenuGroup = {
