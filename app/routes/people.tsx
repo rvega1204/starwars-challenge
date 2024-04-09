@@ -1,6 +1,7 @@
 import { MetaFunction, json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import { CharacterCard } from '~/components/characters';
+import { CharacterSettingsModal } from '~/components/characters/character-settings-modal';
 import { PeopleChallengeData } from '~/data';
 import { getCharacters } from '~/services';
 
@@ -50,8 +51,9 @@ export default function People() {
           ))}
         </ul>
       </div>
-      <div className="my-10 border-b">
+      <div className="my-10 flex flex-row gap-2 border-b">
         <h2 className="text-xl font-medium">Example of the final Result:</h2>
+        <CharacterSettingsModal></CharacterSettingsModal>
       </div>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {characters.map((character, index) => (

@@ -1,24 +1,22 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 interface State {
-  options: OptionsState;
-  setOptions: (newOptions: OptionsState) => void;
+  options: {
+    showName: boolean;
+    showHeight: boolean;
+    showMass: boolean;
+    showHairColor: boolean;
+    showSkinColor: boolean;
+    showEyeColor: boolean;
+    showBirthYear: boolean;
+    showGender: boolean;
+    showHomeworld: boolean;
+  };
+  setOptions: (newOptions: Partial<State['options']>) => void;
 }
-
-interface OptionsState {
-  showName: boolean;
-  showHeight: boolean;
-  showMass: boolean;
-  showHairColor: boolean;
-  showSkinColor: boolean;
-  showEyeColor: boolean;
-  showBirthYear: boolean;
-  showGender: boolean;
-  showHomeworld: boolean;
-}
-
-const initialOptionsState: OptionsState = {
+export type ToggleOption = (option: keyof State['options']) => void;
+const initialOptionsState = {
   showName: true,
   showHeight: true,
   showMass: true,
