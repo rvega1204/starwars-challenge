@@ -30,10 +30,12 @@ const initialOptionsState = {
 
 export const useCharacterSettingsStore = create<State>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       options: initialOptionsState,
-      setOptions: (newOptions) =>
-        set({ options: { ...initialOptionsState, ...newOptions } }),
+      setOptions: (newOptions) => {
+        const { options } = get();
+        set({ options: { ...options, ...newOptions } });
+      },
     }),
     {
       name: 'characters-config',
