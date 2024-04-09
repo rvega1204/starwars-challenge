@@ -16,7 +16,9 @@ export const CharacterSettingsModal = () => {
   };
   return (
     <Dialog>
-      <DialogTrigger>Open Settings</DialogTrigger>
+      <DialogTrigger className="rounded border border-gray-800 p-2">
+        Open Settings
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Characters Information to see</DialogTitle>
@@ -25,14 +27,6 @@ export const CharacterSettingsModal = () => {
             will see.
           </DialogDescription>
           <div className="grid grid-cols-2 gap-2">
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showName}
-                onChange={() => toggleOption('showName')}
-              />
-              Show Name
-            </label>
             <label>
               <input
                 type="checkbox"

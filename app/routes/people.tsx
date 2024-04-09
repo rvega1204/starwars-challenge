@@ -50,7 +50,7 @@ export default function People() {
           ))}
         </ul>
       </div>
-      <div className="my-10 flex flex-row gap-2 border-b">
+      <div className="my-10 flex flex-row items-center gap-2 border-b pb-10">
         <h2 className="text-xl font-medium">Example of the final Result:</h2>
         <CharacterSettingsModal />
       </div>

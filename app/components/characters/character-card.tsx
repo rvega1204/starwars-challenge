@@ -18,7 +18,7 @@ export const CharacterCard: FC<Props> = ({ character }) => {
     <Card>
       <CardHeader>
         <CardTitle>
-          {options.showName && <span>{character.name}</span>}
+          <span>{character.name}</span>
         </CardTitle>
         <CardDescription>
           {options.showHomeworld && (

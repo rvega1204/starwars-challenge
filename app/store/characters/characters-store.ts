@@ -3,7 +3,6 @@ import { persist } from 'zustand/middleware';
 
 interface State {
   options: {
-    showName: boolean;
     showHeight: boolean;
     showMass: boolean;
     showHairColor: boolean;
@@ -17,7 +16,6 @@ interface State {
 }
 export type ToggleOption = (option: keyof State['options']) => void;
 const initialOptionsState = {
-  showName: true,
   showHeight: true,
   showMass: true,
   showHairColor: true,
