@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '../ui/dialog';
+import { CharacterSettingOption } from './character-setting-option';
 export const CharacterSettingsModal = () => {
   const { options, setOptions } = useCharacterSettingsStore();
 
@@ -27,70 +28,47 @@ export const CharacterSettingsModal = () => {
             will see.
           </DialogDescription>
           <div className="grid grid-cols-2 gap-2">
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showHeight}
-                onChange={() => toggleOption('showHeight')}
-              />
-              Show Height
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showMass}
-                onChange={() => toggleOption('showMass')}
-              />
-              Show Mass
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showHairColor}
-                onChange={() => toggleOption('showHairColor')}
-              />
-              Show Hair Color
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showSkinColor}
-                onChange={() => toggleOption('showSkinColor')}
-              />
-              Show Skin Color
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showEyeColor}
-                onChange={() => toggleOption('showEyeColor')}
-              />
-              Show Eye Color
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showBirthYear}
-                onChange={() => toggleOption('showBirthYear')}
-              />
-              Show Birth Year
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showGender}
-                onChange={() => toggleOption('showGender')}
-              />
-              Show Gender
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.showHomeworld}
-                onChange={() => toggleOption('showHomeworld')}
-              />
-              Show Home World
-            </label>
+            <CharacterSettingOption
+              onChange={() => toggleOption('showHomeworld')}
+              title="Show Home World"
+              checked={options.showHomeworld}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showHeight')}
+              title="Show Height"
+              checked={options.showHeight}
+            />
+
+            <CharacterSettingOption
+              onChange={() => toggleOption('showGender')}
+              title="Show Gender"
+              checked={options.showGender}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showMass')}
+              title="Show Mass"
+              checked={options.showMass}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showHairColor')}
+              title="Show Hair Color"
+              checked={options.showHairColor}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showSkinColor')}
+              title="Show Skin Color"
+              checked={options.showSkinColor}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showBirthYear')}
+              title="Show Birth Year"
+              checked={options.showBirthYear}
+            />
+            <CharacterSettingOption
+              onChange={() => toggleOption('showEyeColor')}
+              title="Show Eye Color"
+              checked={options.showEyeColor}
+            />
           </div>
           <DialogFooter></DialogFooter>
         </DialogHeader>

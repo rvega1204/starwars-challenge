@@ -15,16 +15,17 @@ interface State {
   setOptions: (newOptions: Partial<State['options']>) => void;
 }
 export type ToggleOption = (option: keyof State['options']) => void;
+
 const initialOptionsState = {
-  showHeight: true,
-  showMass: true,
-  showHairColor: true,
-  showSkinColor: true,
-  showEyeColor: true,
-  showBirthYear: true,
+  showHeight: false,
+  showMass: false,
+  showHairColor: false,
+  showSkinColor: false,
+  showEyeColor: false,
+  showBirthYear: false,
   showGender: true,
   showHomeworld: true,
-};
+} satisfies State['options'];
 
 export const useCharacterSettingsStore = create<State>()(
   persist(
