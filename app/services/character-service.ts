@@ -12,6 +12,7 @@ export const getCharacters = async (): Promise<Character[]> => {
       }),
     )
     .catch((error) => {
-      throw error;
+      console.log(error);
+      return [];
     });
 };
