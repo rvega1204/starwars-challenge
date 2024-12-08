@@ -7,7 +7,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <Tabs defaultValue="account" className="w-[full]">
+    <Tabs defaultValue="account" className="w-full sm:w-full lg:w-full">
       <TabsList className="h-16 w-full grid-cols-none">
         {starWarsMenuData.map((item) => (
           <NavbarItem

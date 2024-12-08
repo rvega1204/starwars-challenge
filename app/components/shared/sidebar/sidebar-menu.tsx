@@ -8,7 +8,7 @@ import { MenuItemGroup } from './sidebar-menu-item-group';
 export const SidebarMenu = () => {
   const location = useLocation();
   return (
-    <div className="fixed min-h-screen w-[300px] min-w-[300px] border-r p-4">
+    <div className="fixed min-h-screen w-full border-r p-4 sm:w-[300px] sm:min-w-[300px]">
       <SidebarHeader />
       {SidebarMenuData.map((data) => (
         <MenuItemGroup title={data.title} key={data.title}>
