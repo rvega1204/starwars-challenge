@@ -5,6 +5,7 @@ interface ShipDetailsTableProps {
   starship: Starship;
 }
 
+// Table for starship
 const ShipDetailsTable: React.FC<ShipDetailsTableProps> = ({ starship }) => {
   if (!starship) return null;
 
