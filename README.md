@@ -34,6 +34,16 @@ Bonus Features:
 1. Search Input: Added a search input for filtering table data.
 2. Table Sorting: Implemented sorting functionality by clicking on column headers.
 
+## Screenshots
+
+### Starships Table
+
+![Starships Table](https://github.com/rvega1204/starwars-challenge/blob/master/table.png?raw=true)
+
+### Modal Details View
+
+![Starship Modal](https://github.com/rvega1204/starwars-challenge/blob/master/modal.png?raw=true)
+
 ## Installation
 
 To get started with this project, follow these steps:
