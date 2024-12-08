@@ -22,11 +22,12 @@ To enhance the design, I generated a Star Wars-inspired background image for the
 While working on the project, I discovered some bugs, so, I tried to update the project ensuring the app functions more smoothly.
 
 Additions to the project:
-starship.ts – Interface for Starship data.
-starship-response.ts – Defines the structure for API responses.
-starship-service.ts – Service for fetching starship data.
-starship.tsx – Route for the Starships page.
-New Starships Component: Includes ship-details-table.tsx, ship-table.tsx, and starship-modal.tsx.
+
+1. starship.ts – Interface for Starship data.
+2. starship-response.ts – Defines the structure for API responses.
+3. starship-service.ts – Service for fetching starship data.
+4. starship.tsx – Route for the Starships page.
+5. New Starships Component: Includes ship-details-table.tsx, ship-table.tsx, and starship-modal.tsx.
 
 Bonus Features:
 
