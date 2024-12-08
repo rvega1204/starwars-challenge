@@ -13,13 +13,13 @@ This repository serves as a demonstration of setting up the challenge project us
 
 ## My Changes
 
-I updated a the route at http://localhost:5173/starships that displays a table with information retrieved from the Star Wars API. This table presents detailed data about Star Wars starships and includes a "Details" link for accessing all the information about a specific starship model.
+I updated the route at http://localhost:5173/starships that displays a table with information retrieved from the Star Wars API. This table presents detailed data about Star Wars starships and includes a "Details" link for accessing all the information about a specific starship model.
 
 The table was styled using Tailwind CSS, where I aimed to emulate a Star Wars-themed color palette. Additionally, I implemented responsive classes for both the table and the modal. Although I began improving responsiveness across the entire app, I ran out of time to complete that task.
 
 To enhance the design, I generated a Star Wars-inspired background image for the modal using AI (Copilot). The table also features hover effects on each <td>, making it more interactive. During development, I researched Tailwind CSS extensively to implement responsive classes effectively.
 
-While working on the project, I discovered some bugs, so, I tried to update the project ensuring the app functions more smoothly.
+While working on the project, I discovered some bugs, so, I tried to update the project ensuring the app functions more smoothly. Also, I tried to give continuity to the code.
 
 Additions to the project:
 
