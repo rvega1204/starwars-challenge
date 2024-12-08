@@ -11,7 +11,27 @@
 
 This repository serves as a demonstration of setting up the challenge project using Remix and Shadcn UI to interact with the Star wars API. The project utilizes endpoints related to Characters, Planets, Films, Species, Vehicles, Startships provided by the API.
 
-The Football API Challenge
+## My Changes
+
+I introduced a new route at http://localhost:5173/starships that displays a table with information retrieved from the Star Wars API. This table presents detailed data about Star Wars starships and includes a "Details" link for accessing all the information about a specific starship model.
+
+The table was styled using Tailwind CSS, where I aimed to emulate a Star Wars-themed color palette. Additionally, I implemented responsive classes for both the table and the modal. Although I began improving responsiveness across the entire app, I ran out of time to complete that task.
+
+To enhance the design, I generated a Star Wars-inspired background image for the modal using AI (Copilot). The table also features hover effects on each <td>, making it more interactive. During development, I researched Tailwind CSS extensively to implement responsive classes effectively.
+
+While working on the project, I discovered some bugs, so, I tried to update the project ensuring the app functions more smoothly.
+
+Additions to the project:
+starship.ts – Interface for Starship data.
+starship-response.ts – Defines the structure for API responses.
+starship-service.ts – Service for fetching starship data.
+starship.tsx – Route for the Starships page.
+New Starships Component: Includes ship-details-table.tsx, ship-table.tsx, and starship-modal.tsx.
+
+Bonus Features:
+
+1. Search Input: Added a search input for filtering table data.
+2. Table Sorting: Implemented sorting functionality by clicking on column headers.
 
 ## Installation
 
@@ -20,7 +40,7 @@ To get started with this project, follow these steps:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/pandanow/challenge-page.git
+git clone https://github.com/rvega1204/starwars-challenge.git
 ```
 
 2. Navigate to the project directory
